@@ -14,7 +14,10 @@ export class ProductComponent implements OnInit {
     constructor(private productService: ProductService) {}
 
     ngOnInit(): void {
-        this.productService.read().subscribe(products => {
+        // this.productService.read().subscribe(products => {
+        //     this.products = products;
+        // });
+        this.productService.readSystax().subscribe(products => {
             this.products = products;
         });
     }

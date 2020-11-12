@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvisoComponent implements OnInit {
     constructor() { }
-    description: String = `véio, o bagui é loco`;
+    description: string = `véio, o bagui é loco 2`;
     price: number = 1254;
 
     ngOnInit(): void { }
