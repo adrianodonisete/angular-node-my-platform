@@ -10,7 +10,7 @@ import { ProductService } from './product.service';
 	styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
-<<<<<<< HEAD
+	
 	products: Product[];
 	displayColumns: ['id', 'name', 'price', 'action'];
 
@@ -57,32 +57,4 @@ export class ProductComponent implements OnInit {
 		this.pendingShow = false;
 		this.canceledShow = true;
 	}
-=======
-    products: Product[];
-    displayColumns: ['id', 'name', 'price', 'action'];
-    result = 'sem conteúdo';
-
-    constructor(private productService: ProductService) {}
-
-    ngOnInit(): void {
-        // this.productService.read().subscribe(products => {
-        //     this.products = products;
-        // });
-        this.productService.readSystax().subscribe(res => {
-            this.result = res.token;
-        });
-    }
->>>>>>> 9255bd1b319dce25b9e3b3f5b73820697cb59a85
 }
-
-/**
-    <div>
-    <div *ngFor="let p of products">
-        {{ p.id }}
-        <b>{{ p.name }}</b>
-        {{ p.price | currency: 'BRL' }}
-        <br />
-        teste
-    </div>
-</div>
- */

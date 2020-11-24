@@ -13,19 +13,19 @@ import { registerLocaleData } from '@angular/common';
 registerLocaleData(localePt);
 
 @NgModule({
-    declarations: [AppComponent, AvisoComponent, ProductComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MatSnackBarModule,
-        HttpClientModule,
-    ],
-    providers: [
-        {
-            provide: LOCALE_ID,
-            useValue: 'pt-BR',
-        },
-    ],
-    bootstrap: [AppComponent],
+	declarations: [AppComponent, AvisoComponent, ProductComponent],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		MatSnackBarModule,
+		HttpClientModule,
+	],
+	providers: [
+		{
+			provide: LOCALE_ID,
+			useValue: 'pt-BR',
+		},
+	],
+	bootstrap: [AppComponent],
 })
 export class AppModule {}
