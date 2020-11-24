@@ -1,14 +1,42 @@
-<div>
-    <div *ngFor="let p of products">
+
+
+<!-- 
+  usar o async somente no ngIf, no ngFor utilizar o apelido dado para o observable
+ -->
+<div *ngIf="prods$ | async as myProds; else loading">
+    <div *ngFor="let p of myProds">
         {{ p.id }}
         <b>{{ p.name }}</b>
-        {{ p.price | currency: 'BRL' }}
+        {{ p.price | currency: 'BRL' }} xx
         <br />
-        teste
+        {{ p.total }}
     </div>
 </div>
 
-<!-- 
-    
+<ng-template #loading>
+  <span>Carregando conteúdo</span>
+</ng-template>
 
--->
+<hr>
+
+<button (click)="allShow()" type="checkbox" >All</button>
+<button (click)="onlyPaidShow()" type="checkbox" >Paid</button>
+<button (click)="onlyPendingShow()" type="checkbox" >Pending</button>
+<button (click)="onlyCanceledShow()" type="checkbox" >Canceled</button>
+
+
+<div *ngIf="paidShow" class="row container-fluid">
+  paid itens
+</div>
+
+<div *ngIf="pendingShow" class="row container-fluid">
+  pending itens
+</div>
+
+<div *ngIf="canceledShow" class="row container-fluid">
+  canceled itens
+</div>
+
+<div *ngIf="paidShow" class="row container-fluid">
+  paid itens 2
+</div>
