@@ -10,10 +10,6 @@ import { ProductService } from './product.service';
 	styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
-<<<<<<< HEAD
-=======
-	
->>>>>>> 263849b8db8ace01ba6e7b0ce5a30d10c9618e46
 	products: Product[];
 	displayColumns: ['id', 'name', 'price', 'action'];
 

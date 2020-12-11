@@ -10,10 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { TokenComponent } from './cron/token/token.component';
 registerLocaleData(localePt);
 
 @NgModule({
-	declarations: [AppComponent, AvisoComponent, ProductComponent],
+	declarations: [AppComponent, AvisoComponent, ProductComponent, TokenComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
